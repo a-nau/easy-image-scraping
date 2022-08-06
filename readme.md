@@ -102,6 +102,8 @@ If you just want to search for a single keywords adjust and run [`search_by_keyw
   , [MIT License](https://github.com/joyzoursky/docker-python-chromedriver/blob/master/LICENSE)
 - Cookie notices are handled by the [I don't care about cookies](https://www.i-dont-care-about-cookies.eu/) extension
 
+The project is licensed under the [MIT](LICENSE) license.
+
 
 ## Disclaimer
 
