@@ -1,0 +1,5 @@
+selenium
+requests
+pillow
+streamlit
+tqdm
