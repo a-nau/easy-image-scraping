@@ -1,3 +1,5 @@
+  [![arxiv](http://img.shields.io/badge/paper-arxiv.2210.09814-B31B1B.svg)](https://arxiv.org/abs/2210.09814)
+
 # Easy Image Scraping from Google, Bing, Yahoo and Baidu
 
 Automatically scrape images with your query from the popular search engines
@@ -10,6 +12,8 @@ Automatically scrape images with your query from the popular search engines
 using an easy-to-use Frontend or using scripts.
 
 ![](data/misc/demo.gif)
+
+This code is part of a [paper]((https://arxiv.org/abs/2210.09814)) ([citation](#citation)), also check the [project page](https://a-nau.github.io/parcel2d/) for more details.
 
 ## Installation
 
@@ -103,6 +107,20 @@ If you just want to search for a single keywords adjust and run [`search_by_keyw
 - Cookie notices are handled by the [I don't care about cookies](https://www.i-dont-care-about-cookies.eu/) extension
 
 The project is licensed under the [MIT](LICENSE) license.
+
+
+## Citation
+
+If you use this code for scientific research, please consider citing
+
+```latex
+@inproceedings{naumannScrapeCutPasteLearn2022,
+  title = {Scrape, Cut, Paste and Learn: Automated Dataset Generation Applied to Parcel Logistics},
+  booktitle = {{{IEEE Conference}} on {{Machine Learning}} and Applications} ({{ICMLA}})},
+  author = {Naumann, Alexander and Hertlein, Felix and Zhou, Benchun and Dörr, Laura and Furmans, Kai},
+  date = {2022},
+}
+```
 
 
 ## Disclaimer
