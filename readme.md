@@ -1,4 +1,5 @@
-  [![arxiv](http://img.shields.io/badge/paper-arxiv.2210.09814-B31B1B.svg)](https://arxiv.org/abs/2210.09814)
+[![arxiv](http://img.shields.io/badge/paper-arxiv.2210.09814-B31B1B.svg)][arxiv]
+[![project page](https://img.shields.io/badge/website-project%20page-informational.svg)][project page]
 
 # Easy Image Scraping from Google, Bing, Yahoo and Baidu
 
@@ -13,7 +14,8 @@ using an easy-to-use Frontend or using scripts.
 
 ![](data/misc/demo.gif)
 
-This code is part of a [paper]((https://arxiv.org/abs/2210.09814)) ([citation](#citation)), also check the [project page](https://a-nau.github.io/parcel2d/) for more details.
+This code is part of a [paper][arxiv] ([citation](#citation)), also check
+the [project page][project page] if you are interested in creation a dataset for instance segmentation.
 
 ## Installation
 
@@ -108,7 +110,6 @@ If you just want to search for a single keywords adjust and run [`search_by_keyw
 
 The project is licensed under the [MIT](LICENSE) license.
 
-
 ## Citation
 
 If you use this code for scientific research, please consider citing
@@ -122,7 +123,11 @@ If you use this code for scientific research, please consider citing
 }
 ```
 
-
 ## Disclaimer
 
 Please be aware of copyright restrictions that might apply to images you download.
+
+
+[arxiv]: https://arxiv.org/abs/2210.09814
+
+[project page]: https://a-nau.github.io/parcel2d
