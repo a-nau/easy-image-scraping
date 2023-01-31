@@ -108,18 +108,19 @@ If you just want to search for a single keywords adjust and run [`search_by_keyw
   , [MIT License](https://github.com/joyzoursky/docker-python-chromedriver/blob/master/LICENSE)
 - Cookie notices are handled by the [I don't care about cookies](https://www.i-dont-care-about-cookies.eu/) extension
 
-The project is licensed under the [MIT](LICENSE) license.
+Unless stated otherwise, this project is licensed under the [MIT](LICENSE) license.
 
 ## Citation
 
 If you use this code for scientific research, please consider citing
 
 ```latex
-@inproceedings{naumannScrapeCutPasteLearn2022,
-  title = {Scrape, Cut, Paste and Learn: Automated Dataset Generation Applied to Parcel Logistics},
-  booktitle = {{{IEEE Conference}} on {{Machine Learning}} and Applications} ({{ICMLA}})},
-  author = {Naumann, Alexander and Hertlein, Felix and Zhou, Benchun and Dörr, Laura and Furmans, Kai},
-  date = {2022},
+@inproceedings{Dwibedi_2017_ICCV,
+	title        = {Cut, Paste and Learn: Surprisingly Easy Synthesis for Instance Detection},
+	author       = {Dwibedi, Debidatta and Misra, Ishan and Hebert, Martial},
+	year         = 2017,
+	month        = {Oct},
+	booktitle    = {The IEEE International Conference on Computer Vision (ICCV)}
 }
 ```
 
