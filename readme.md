@@ -33,13 +33,13 @@ docker build -t image_scraping_tool .
 ### Local installation
 
 - Set up an environment using
-    ```shell
-    conda env create -f environment.yml
-    ```
+  ```shell
+  conda env create -f environment.yml
+  ```
   or
-    ```shell
-    pip install -r requirements.txt
-    ```
+  ```shell
+  pip install -r requirements.txt
+  ```
 - To use [Selenium](https://www.selenium.dev/), we need to download
   the [Chrome Driver](https://sites.google.com/chromium.org/driver/) (also
   see [this](https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/))
@@ -47,12 +47,12 @@ docker build -t image_scraping_tool .
   version
 - Unzip it, and add it to the path (for details, see [here](https://stackoverflow.com/a/40556092)). Alternatively, you
   can adjust [scrape_and_download.py](src/scraping/scrape_and_download.py)
-    ```python
-    with webdriver.Chrome(
-        executable_path="path/to/chrome_diver.exe",  # add this line
-        options=set_chrome_options()
-    ) as wd:
-    ```
+  ```python
+  with webdriver.Chrome(
+      executable_path="path/to/chrome_diver.exe",  # add this line
+      options=set_chrome_options()
+  ) as wd:
+  ```
 
 </details>
 
@@ -98,11 +98,11 @@ If you just want to search for a single keywords adjust and run [`search_by_keyw
 ## License and Credits
 
 - Code is partially based on and borrowed from
-    - [sczhengyabin/Image-Downloader](https://github.com/sczhengyabin/Image-Downloader) (
-      mostly [crawler.py](https://github.com/sczhengyabin/Image-Downloader/blob/master/crawler.py))
-      , [MIT License](https://github.com/sczhengyabin/Image-Downloader/blob/master/LICENSE)
-    - [Article](https://towardsdatascience.com/image-scraping-with-python-a96feda8af2d) with Gists
-      by [Fabian Bosler](https://medium.com/@fabianbosler), see [fetch_image_urls.py](src/scraping/fetch_image_urls.py)
+  - [sczhengyabin/Image-Downloader](https://github.com/sczhengyabin/Image-Downloader) (
+    mostly [crawler.py](https://github.com/sczhengyabin/Image-Downloader/blob/master/crawler.py))
+    , [MIT License](https://github.com/sczhengyabin/Image-Downloader/blob/master/LICENSE)
+  - [Article](https://towardsdatascience.com/image-scraping-with-python-a96feda8af2d) with Gists
+    by [Fabian Bosler](https://medium.com/@fabianbosler), see [fetch_image_urls.py](src/scraping/fetch_image_urls.py)
 - Dockerfile is based
   on [joyzoursky/ docker-python-chromedriver](https://github.com/joyzoursky/docker-python-chromedriver/blob/master/py-debian/3.9-selenium/Dockerfile)
   , [MIT License](https://github.com/joyzoursky/docker-python-chromedriver/blob/master/LICENSE)
@@ -115,12 +115,11 @@ Unless stated otherwise, this project is licensed under the [MIT](LICENSE) licen
 If you use this code for scientific research, please consider citing
 
 ```latex
-@inproceedings{Dwibedi_2017_ICCV,
-	title        = {Cut, Paste and Learn: Surprisingly Easy Synthesis for Instance Detection},
-	author       = {Dwibedi, Debidatta and Misra, Ishan and Hebert, Martial},
-	year         = 2017,
-	month        = {Oct},
-	booktitle    = {The IEEE International Conference on Computer Vision (ICCV)}
+@inproceedings{naumannScrapeCutPasteLearn2022,
+	title        = {Scrape, Cut, Paste and Learn: Automated Dataset Generation Applied to Parcel Logistics},
+	author       = {Naumann, Alexander and Hertlein, Felix and Zhou, Benchun and Dörr, Laura and Furmans, Kai},
+	booktitle    = {{{IEEE Conference}} on {{Machine Learning}} and Applications ({{ICMLA}})},
+	date         = 2022
 }
 ```
 
@@ -128,7 +127,5 @@ If you use this code for scientific research, please consider citing
 
 Please be aware of copyright restrictions that might apply to images you download.
 
-
 [arxiv]: https://arxiv.org/abs/2210.09814
-
 [project page]: https://a-nau.github.io/parcel2d
