@@ -24,7 +24,7 @@ def set_chrome_options() -> Options:
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_extension(
-        ROOT_PATH / "data/extensions/I-don-t-care-about-cookies.crx"
+        ROOT_PATH / "data/extensions/I-still-don-t-care-about-cookies.crx"
     )
     chrome_prefs = {}
     chrome_options.experimental_options["prefs"] = chrome_prefs

@@ -1,5 +1,5 @@
-selenium
-requests
-pillow
-streamlit
-tqdm
+selenium==4.10.0
+requests==2.31.0
+pillow==9.5.0
+streamlit==1.24.1
+tqdm==4.65.0

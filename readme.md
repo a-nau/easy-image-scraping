@@ -74,7 +74,7 @@ downloaded images.
 Start using the command line with
 
 ```shell
-docker run -it --rm --name image_scraping_tool --mount type=bind,source=${PWD},target=/usr/src/app -p 5000:5000 image_scraping_tool bash
+docker run -it --rm --name image_scraping_tool --network host --mount type=bind,source=${PWD},target=/usr/src/app -p 5000:5000 image_scraping_tool bash
 ```
 
 #### Search for a keyword
@@ -106,7 +106,7 @@ If you just want to search for a single keywords adjust and run [`search_by_keyw
 - Dockerfile is based
   on [joyzoursky/ docker-python-chromedriver](https://github.com/joyzoursky/docker-python-chromedriver/blob/master/py-debian/3.9-selenium/Dockerfile)
   , [MIT License](https://github.com/joyzoursky/docker-python-chromedriver/blob/master/LICENSE)
-- Cookie notices are handled by the [I don't care about cookies](https://www.i-dont-care-about-cookies.eu/) extension
+- Cookie notices are handled by the [I still don't care about cookies](https://github.com/OhMyGuus/I-Still-Dont-Care-About-Cookies) extension [GNU General Public License v3.0](http://172.21.127.85:5000/)
 
 Unless stated otherwise, this project is licensed under the [MIT](LICENSE) license.
 
