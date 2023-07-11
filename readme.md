@@ -63,7 +63,7 @@ docker build -t image_scraping_tool .
 Start the front end with
 
 ```shell
-docker run -it --rm --name image_scraping_tool --mount type=bind,source=${PWD},target=/usr/src/app -p 5000:5000 image_scraping_tool
+docker run -it --rm --name image_scraping_tool --network host --mount type=bind,source=${PWD},target=/usr/src/app -p 5000:5000 image_scraping_tool
 ```
 
 Enter your query and wait for the results to show in the `output` folder. The web applications also shows a preview of
@@ -74,7 +74,7 @@ downloaded images.
 Start using the command line with
 
 ```shell
-docker run -it --rm --name image_scraping_tool --network host --mount type=bind,source=${PWD},target=/usr/src/app -p 5000:5000 image_scraping_tool bash
+docker run -it --rm --name image_scraping_tool --mount type=bind,source=${PWD},target=/usr/src/app -p 5000:5000 image_scraping_tool bash
 ```
 
 #### Search for a keyword
