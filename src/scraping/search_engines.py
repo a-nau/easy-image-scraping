@@ -77,7 +77,7 @@ class SearchGoogle(Search):
             except Exception:
                 continue
 
-            images = self.wd.find_elements(By.CSS_SELECTOR, "img.n3VNCb")
+            images = self.wd.find_elements(By.CSS_SELECTOR, "img.r48jcc")
             for image in images:
                 if image.get_attribute("src") and "http" in image.get_attribute("src"):
                     img_urls.append(image.get_attribute("src"))
