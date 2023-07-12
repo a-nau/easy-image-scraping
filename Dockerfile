@@ -25,6 +25,7 @@ COPY requirements.txt /usr/src/app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 ENV PYTHONPATH "${PYTHONPATH}:/usr/src/app"
+COPY . /usr/src/app/
 
 EXPOSE 5000
 
