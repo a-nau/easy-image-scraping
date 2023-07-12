@@ -17,14 +17,49 @@ using an easy-to-use Frontend or using scripts.
 This code is part of a [paper][arxiv] ([citation](#citation)), also check
 the [project page][project page] if you are interested in creation a dataset for instance segmentation.
 
-## Installation
+## Usage
+
+### Front End
+
+Start the front end with a single command (adjust the `/PATH/TO/OUTPUT` to your desired output path)
+
+```shell
+docker run -it --rm --name easy_image_scraping --network host --mount type=bind,source=/PATH/TO/OUTPUT,target=/usr/src/app/output -p 5000:5000 ghcr.io/a-nau/easy-image-scraping:latest
+```
+
+Enter your query and wait for the results to show in the `output` folder. The web applications also shows a preview of
+downloaded images.
+
+### Command Line
+
+Start using the command line with
+
+```shell
+docker run -it --rm --name easy_image_scraping --mount type=bind,source=/PATH/TO/OUTPUT,target=/usr/src/app/output -p 5000:5000 ghcr.io/a-nau/easy-image-scraping:latest bash
+```
+
+#### Search for a keyword
+
+If you just want to search for a single keywords adjust and run [`search_by_keyword.py`](src/tools/search_by_keyword.py)
+
+#### Search for a list of keywords
+
+- Write the list of search terms in the file `search_terms_eng.txt`.
+- You can then use [Google Translate](https://translate.google.com/) to translate the whole file to new languages.
+  Change the ending of the translated file to the respective language.
+- Adjust [`config.py`](src/config.py) to define search engines for each language
+- Run [`search_by_keywords_from_files`](src/tools/search_by_keywords_from_files.py)
+
+## Installation (optional)
+
+This is optional - you can also directly use our provided container.
 
 ### Docker
 
-Build using
+You can also build the image yourself using
 
 ```shell
-docker build -t image_scraping_tool .
+docker build -t easy_image_scraping .
 ```
 
 <details>
@@ -55,39 +90,6 @@ docker build -t image_scraping_tool .
   ```
 
 </details>
-
-## Usage
-
-### Front End
-
-Start the front end with
-
-```shell
-docker run -it --rm --name image_scraping_tool --network host --mount type=bind,source=${PWD},target=/usr/src/app -p 5000:5000 image_scraping_tool
-```
-
-Enter your query and wait for the results to show in the `output` folder. The web applications also shows a preview of
-downloaded images.
-
-### Command Line
-
-Start using the command line with
-
-```shell
-docker run -it --rm --name image_scraping_tool --mount type=bind,source=${PWD},target=/usr/src/app -p 5000:5000 image_scraping_tool bash
-```
-
-#### Search for a keyword
-
-If you just want to search for a single keywords adjust and run [`search_by_keyword.py`](src/tools/search_by_keyword.py)
-
-#### Search for a list of keywords
-
-- Write the list of search terms in the file `search_terms_eng.txt`.
-- You can then use [Google Translate](https://translate.google.com/) to translate the whole file to new languages.
-  Change the ending of the translated file to the respective language.
-- Adjust [`config.py`](src/config.py) to define search engines for each language
-- Run [`search_by_keywords_from_files`](src/tools/search_by_keywords_from_files.py)
 
 ## Affiliations
 
