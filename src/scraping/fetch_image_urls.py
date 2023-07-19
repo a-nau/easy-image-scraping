@@ -37,7 +37,7 @@ def fetch_image_urls(query: str, max_links_to_fetch: int, wd: webdriver.Chrome, 
         print("Found: {} image links. Continue ...".format(number_results))
         scroll_count += 1
     print(
-        f"Found: {number_results} search results. Extracting first {max_links_to_fetch} links"
+        f"Found: {number_results} search results using {engine}. Extracting first {max_links_to_fetch} links"
     )
     image_urls = search_engine.get_image_urls(thumbnail_results[:max_links_to_fetch])
     print(f"Found: {len(image_urls[:max_links_to_fetch])} image links, done!")
