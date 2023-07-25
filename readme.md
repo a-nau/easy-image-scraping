@@ -59,8 +59,7 @@ This is optional - you can also directly use our provided container.
 You can also build and run the image yourself using
 
 ```shell
-docker build -t easy_image_scraping . ; docker run -it --rm --name easy_image_scraping -p 5000:5000 --mount type=bind,source=/PATH/TO/OUTPUT,target=/usr/src/app/output easy_image_scraping
-
+docker build -t easy_image_scraping . && docker run -it --rm --name easy_image_scraping -p 5000:5000 --mount type=bind,source=/PATH/TO/OUTPUT,target=/usr/src/app/output easy_image_scraping
 ```
 
 <details>
