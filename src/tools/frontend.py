@@ -8,6 +8,7 @@ base_path = Path(__file__).parent.parent.parent
 sys.path.append(base_path.as_posix())
 
 from src.tools.search_by_keyword import search_by_keyword
+from src.tools.clear_output_folder import clear_output_folder
 
 
 def main():
@@ -27,9 +28,12 @@ def main():
     num_images = st.slider(
         "Number of Images to Download", min_value=1, max_value=500, value=10
     )
+    clear_output = st.checkbox("Clear Output Folder", value=False, help="Remove all files and folders in output folder.")
 
     # Run search
     if st.button("Start Search", disabled=search_query == ""):
+        if clear_output:
+            clear_output_folder()
         for query in search_query.split(";"):
             query = query.strip()
             search_by_keyword(
