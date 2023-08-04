@@ -151,22 +151,6 @@ class SearchYahoo(Search):
             query.pop("h", None)
             img_url = img_url._replace(query=urlencode(query, True))
             img_urls.append(img_url.geturl())
-
-            # * Old logic, where clicking on thumbnail opened more details on image
-            # try:
-            #     thumbnail.click()  # try to click thumbnail to get img src
-            #     self.sleep()
-            # except Exception:
-            #     continue
-            #
-            # image = retry(self.wd.find_element, [By.ID, 'img'])
-            # if image.get_attribute('src') and 'http' in image.get_attribute('src'):
-            #     img_urls.append(image.get_attribute('src'))
-            #
-            # # close view
-            # close = retry(self.wd.find_elements, [By.CLASS_NAME, "close"])[0]
-            # close.click()
-            # self.sleep()
         return img_urls
 
     def click_show_more_button(self):

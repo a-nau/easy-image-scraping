@@ -24,7 +24,7 @@ the [project page][project page] if you are interested in creation a dataset for
 Start the front end with a single command (adjust the `/PATH/TO/OUTPUT` to your desired output path)
 
 ```shell
-docker run -it --rm --name easy_image_scraping --network host --mount type=bind,source=/PATH/TO/OUTPUT,target=/usr/src/app/output -p 5000:5000 ghcr.io/a-nau/easy-image-scraping:latest
+docker run -it --rm --name easy_image_scraping --mount type=bind,source=/PATH/TO/OUTPUT,target=/usr/src/app/output -p 5000:5000 ghcr.io/a-nau/easy-image-scraping:latest
 ```
 
 Enter your query and wait for the results to show in the `output` folder. The web applications also shows a preview of
@@ -60,6 +60,10 @@ You can also build the image yourself using
 
 ```shell
 docker build -t easy_image_scraping .
+```
+The run it by using
+```shell
+docker run -it --rm --name easy_image_scraping -p 5000:5000 --mount type=bind,source=/PATH/TO/OUTPUT,target=/usr/src/app/output easy_image_scraping
 ```
 
 <details>
